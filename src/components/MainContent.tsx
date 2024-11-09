@@ -1,29 +1,36 @@
 import { useState } from "react";
 import Footer from "./Footer";
-// import '@fortawesome/fontawesome-free/css/all.min.css'
-
+import photo1 from "../assets/Client-First - IMAGES/photo-of-people-walking-on-hallway-3182811.svg";
+import photo2 from "../assets/Client-First - IMAGES/white-concrete-building-1838640.svg"
+import logo from "../assets/Client-First - IMAGES/Image.svg"
+import icon1 from "../assets/Client-First - IMAGES/Logo 1.svg"
+import icon2 from "../assets/Client-First - IMAGES/Logo 2.svg"
+import icon3 from "../assets/Client-First - IMAGES/Logo 3.svg"
+import icon4 from "../assets/Client-First - IMAGES/Logo 4.svg"
+import icon5 from "../assets/Client-First - IMAGES/Logo 5.svg"
+/**
+ *
+ *
+ * @return {*} 
+ */
 const MainContent = () => {
   const [showFullText, setShowFullText] = useState(false);
   const author = [
     {
       name: "Floyd Miles",
       role: "Content Writer",
-      imgSrc: "/images/author1.jpg",
     },
     {
       name: "Dianne Russell",
       role: "Content Writer",
-      imgSrc: "/images/author2.jpg",
     },
     {
       name: "Jenny Wilson",
       role: "Editor",
-      imgSrc: "/images/author3.jpg",
     },
     {
       name: "Leslie Alexander",
       role: "Content Writer",
-      imgSrc: "/images/author4.jpg",
     },
   ];
   const posts = [
@@ -63,8 +70,7 @@ const MainContent = () => {
       author: "John Doe",
       date: "Aug 23, 2022",
     },
-    // { id: 7, title: '8 Figma design systems that you can download for free today.', author: 'John Doe', date: 'Aug 23, 2022' },
-    // { id: 8, title: '8 Figma design systems that you can download for free today.', author: 'John Doe', date: 'Aug 23, 2022' },
+
   ];
 
   const handleReadMore = () => {
@@ -83,7 +89,7 @@ const MainContent = () => {
       <section
         className="bg-gray-800 text-white py-20 px-4 md:px-20 flex flex-col items-start md:items-center"
         style={{
-          backgroundImage: "images/background.svg",
+          backgroundImage: "url({photo1})",
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}>
@@ -126,7 +132,7 @@ const MainContent = () => {
           <h1 className="text-2xl font-semibold mb-4">Featured Post</h1>
           <section className="p-6 border border-gray-300 rounded-md shadow-md bg-white">
             <img
-              src="/images/background.svg" // Replace with your image path
+              src={photo2} 
               alt="Featured Post"
               className="w-full h-48 object-cover rounded-t-md"
             />
@@ -287,14 +293,14 @@ const MainContent = () => {
           {/* Image */}
           <div>
             <img
-              src="/images/background.svg" // Update with the correct image path
+              src={photo1}
               alt="Why We Started"
               className="w-full h-full object-cover"
             />
           </div>
 
           {/* Text Content */}
-          <div>
+          <div className="relative lg:-left-[150px] lg:top-[60px] bg-white p-8">
             <h3 className="text-sm font-semibold uppercase text-gray-500 mb-2">
               Why We Started
             </h3>
@@ -314,7 +320,7 @@ const MainContent = () => {
         </section>
 
         {/* List of Authors Section */}
-        <section className="max-w-5xl mx-auto mb-16">
+        <section className="max-w-5xl mx-auto mb-16 py-12">
           <h2 className="text-2xl font-semibold text-gray-800 text-center mb-8">
             List of Authors
           </h2>
@@ -325,7 +331,7 @@ const MainContent = () => {
                 key={index}
                 className="bg-white rounded-lg shadow-md p-4 text-center hover:bg-[#FBF6EA]">
                 <img
-                  src={auth.imgSrc}
+                  src={logo}
                   alt={auth.name}
                   className="w-20 h-20 mx-auto rounded-full mb-4"
                 />
@@ -360,10 +366,11 @@ const MainContent = () => {
               <span className="font-bold">Featured in</span>
             </p>
 
-            <img src="/images/logo1.png" alt="Logo 1" className="h-8" />
-            <img src="/images/logo2.png" alt="Logo 2" className="h-8" />
-            <img src="/images/logo3.png" alt="Logo 3" className="h-8" />
-            <img src="/images/logo4.png" alt="Logo 4" className="h-8" />
+            <img src={icon1} alt="Logo 1" className="h-8" />
+            <img src={icon2} alt="Logo 2" className="h-8" />
+            <img src={icon3} alt="Logo 3" className="h-8" />
+            <img src={icon4} alt="Logo 4" className="h-8" />
+            <img src={icon5} alt="Logo 5" className="h-8" />
           </div>
         </section>
       </div>
@@ -393,7 +400,7 @@ const MainContent = () => {
             </p>
             <div className="flex items-center space-x-4">
               <img
-                src="/images/user-avatar.jpg" // Update with the correct image path
+                src={logo}
                 alt="User Avatar"
                 className="w-10 h-10 rounded-full"
               />

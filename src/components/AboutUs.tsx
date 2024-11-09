@@ -1,48 +1,42 @@
 import groupPhoto from "../assets/Client-First - IMAGES/man-in-black-suit-wearing-eye-glasses-sitting-on-gray-sofa-using-macbook-3772622.svg";
 import handPhoto from "../assets/Client-First - IMAGES/ground-group-growth-hands-461049.svg";
 import groupPhoto2 from "../assets/Client-First - IMAGES/photo-of-woman-wearing-eyeglasses-3184405.svg";
+import logo from "../assets/Client-First - IMAGES/Image.svg"
 import Footer from "./Footer";
 function AboutUs() {
   const author = [
     {
       name: "Floyd Miles",
       role: "Content Writer",
-      imgSrc: "/images/author1.jpg",
     },
     {
       name: "Dianne Russell",
       role: "Content Writer",
-      imgSrc: "/images/author2.jpg",
     },
     {
       name: "Jenny Wilson",
       role: "Editor",
-      imgSrc: "/images/author3.jpg",
     },
     {
       name: "Leslie Alexander",
       role: "Content Writer",
-      imgSrc: "/images/author4.jpg",
     },
     {
-      name: "Floyd Miles",
+      name: "Guy Hawkins",
       role: "Content Writer",
-      imgSrc: "/images/author1.jpg",
     },
     {
-      name: "Dianne Russell",
+      name: "Eleanor Pena",
       role: "Content Writer",
-      imgSrc: "/images/author2.jpg",
     },
     {
-      name: "Jenny Wilson",
+      name: "Robert Fox",
       role: "Editor",
-      imgSrc: "/images/author3.jpg",
     },
     {
-      name: "Leslie Alexander",
+      name: "Jacob Jones",
       role: "Content Writer",
-      imgSrc: "/images/author4.jpg",}
+    },
   ];
   return (
     <>
@@ -193,7 +187,7 @@ function AboutUs() {
                 key={index}
                 className="bg-white rounded-lg shadow-md p-4 text-center hover:bg-[#FBF6EA]">
                 <img
-                  src={auth.imgSrc}
+                  src={logo}
                   alt={auth.name}
                   className="w-20 h-20 mx-auto rounded-full mb-4"
                 />
