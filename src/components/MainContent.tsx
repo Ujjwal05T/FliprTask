@@ -2,6 +2,7 @@ import { useState } from "react";
 import Footer from "./Footer";
 import photo1 from "../assets/Client-First - IMAGES/photo-of-people-walking-on-hallway-3182811.svg";
 import photo2 from "../assets/Client-First - IMAGES/white-concrete-building-1838640.svg"
+import bgPhoto from "../assets/Client-First - IMAGES/man-in-black-suit-wearing-eye-glasses-sitting-on-gray-sofa-using-macbook-3772622.svg"
 import logo from "../assets/Client-First - IMAGES/Image.svg"
 import icon1 from "../assets/Client-First - IMAGES/Logo 1.svg"
 import icon2 from "../assets/Client-First - IMAGES/Logo 2.svg"
@@ -89,11 +90,13 @@ const MainContent = () => {
       <section
         className="bg-gray-800 text-white py-20 px-4 md:px-20 flex flex-col items-start md:items-center"
         style={{
-          backgroundImage: "url({photo1})",
+          backgroundImage: `url(${bgPhoto})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
+          opacity: "0.7",
+          
         }}>
-        <div className="mr-auto">
+        <div className=" z-10 relative mr-auto">
           <p className="text-sm uppercase text-yellow-500 mb-2">
             Posted on Startup
           </p>
