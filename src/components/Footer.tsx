@@ -1,29 +1,30 @@
 import logo from "../assets/Client-First - IMAGES/Logo.svg";
+import { Link } from "react-router-dom";
 
 function Footer() {
   return (
     <>
       <div className="bg-black pb-8">
-        <div className="flex justify-between mt-5">
-          <div className="mt-6">
+        <div className="flex flex-col md:flex-row justify-between mt-5">
+          <div className="mt-6 md:justify-start">
             <img src={logo} alt="logo" className="p-3 mx-6 min-w-14" />
           </div>
           <div className="font-semibold text-white mt-6 mx-3 flex space-x-4">
             <ul className="flex justify-center space-x-4 p-2">
               <li className="p-2">
-                <a href="#">Home</a>
+              <Link to="/">Home</Link>
               </li>
               <li className="p-2">
-                <a href="#">About</a>
+              <Link to="/blog">Blog</Link>
               </li>
               <li className="p-2">
-                <a href="#">Services</a>
+              <Link to="/about">About Us</Link>
               </li>
               <li className="p-2">
-                <a href="#">Contact Us</a>
+              <Link to="/contact-us">Contact Us</Link>
               </li>
               <li className="p-2">
-                <a href="#">Privacy Policy</a>
+              <Link to="/privacy-policy">Privacy Policy</Link>
               </li>
             </ul>
           </div>
