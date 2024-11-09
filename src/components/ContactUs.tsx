@@ -1,14 +1,7 @@
 
-import { useState } from 'react';
 import Footer from './Footer';
 
 const ContactUs = () => {
- 
-
- 
-    // Handle form submission logic here
-   
-
   return (
     <>
 
